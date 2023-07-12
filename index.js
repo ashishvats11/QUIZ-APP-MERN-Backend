@@ -4,9 +4,12 @@ import bodyParser from "body-parser";
 import logger from 'morgan';
 import testRoute from './routes/test.js';
 import userRoutes from './routes/user.js';
+import { configDotenv } from "dotenv";
+
+configDotenv();
 
 const app = Express()
-const PORT = 8000
+const PORT = process.env.PORT;
 
 try {
     mongoose.connect(`mongodb+srv://mukundks:${process.env.MONGOPASS}@quizcluster.rvftkgp.mongodb.net/?retryWrites=true&w=majority`)
