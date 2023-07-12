@@ -4,13 +4,19 @@ import bodyParser from "body-parser";
 import logger from 'morgan';
 import testRoute from './routes/test.js';
 import userRoutes from './routes/user.js';
+
 const app = Express()
+const PORT = 8000
 
 try {
     mongoose.connect(`mongodb+srv://mukundks:${process.env.MONGOPASS}@quizcluster.rvftkgp.mongodb.net/?retryWrites=true&w=majority`)
 } catch (err) {
     console.log(err);
 }
+
+app.listen(PORT, () => {
+    console.log(`API on PORT: ${PORT}`);
+})
 
 app.use(logger('dev'));
 
