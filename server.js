@@ -1,5 +1,5 @@
 import http from 'http';
-import app from './app.js';
+import app from './index.js';
 const port = 8000;
 
 const server = http.createServer(app);

@@ -1,7 +1,0 @@
-{
-    "env": {
-        "PORT": 3000,
-        "MONGOPASS": "quizcluster",
-        "JWT_SECRET": "quizapp"
-    }
-}
